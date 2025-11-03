@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apps — AnnSpace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 80px 10% 40px;
+    }
+    header h1 { font-size: 2.5rem; color: #222; }
+    header p { color: #555; font-size: 1.2rem; margin-top: 10px; }
+    .app-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 10%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .app-text { flex: 1 1 400px; }
+    .app-text h2 { font-size: 2rem; color: #222; }
+    .app-text p { color: #555; line-height: 1.7; margin-top: 10px; }
+    .app-text ul { margin-top: 15px; padding-left: 20px; color: #444; }
+    .app-text li { margin-bottom: 8px; }
+    .app-img { flex: 1 1 350px; text-align: center; }
+    .app-img img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .app-img img:hover { transform: scale(1.05); }
+    .divider {
+      height: 1px;
+      background: #eee;
+      width: 80%;
+      margin: 60px auto;
+    }
+    .btn {
+      display: inline-block;
+      background: #6c63ff;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(108,99,255,0.3);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #777;
+      font-size: 0.9rem;
+      background: #fafafa;
+      margin-top: 60px;
+    }
+    @media (max-width: 900px) {
+      .app-section { flex-direction: column; text-align: center; }
+      .app-img img { max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📱 My Apps</h1>
+    <p>Here are examples of my personal apps — simple, stylish, and useful.</p>
+    <a href="index.html#projects" class="btn">← Back to Portfolio</a>
+  </header>
+
+  <section class="app-section">
+    <div class="app-text">
+      <h2>🧠 MoodLog</h2>
+      <p>A minimalistic mood tracker that helps users understand their emotions through daily logging and visual feedback.</p>
+      <ul>
+        <li> Select your daily mood (happy, neutral, sad)</li>
+        <li> See your emotional trends over time</li>
+        <li> Minimal and clean interface</li>
+      </ul>
+      <a href="moodlog.html" class="btn">View Demo</a>
+    </div>
+    <div class="app-img">
+      <img src="images/moodlog.jpg" alt="MoodLog App Preview" />
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- <section class="app-section"> -->
+    <!-- <div class="app-img"> -->
+      <!-- <img src="images/habitme.jpg" alt="HabitMe App Preview" /> -->
+    </div>
+    <!-- <div class="app-text">  -->
+     <!-- <h2>🔁 HabitMe</h2> -->
+      <!-- <p>A habit tracker that helps you stay consistent with your goals — from waking up early to drinking more water.</p> -->
+      <!-- <ul> -->
+        <!-- <li>➕ Add and manage your daily habits</li> -->
+        <!-- <li>✅ Mark completed tasks easily</li> -->
+        <!-- <li>📈 Track your progress and motivation visually</li> -->
+      <!-- </ul> -->
+      <!-- <a href="habitme.html" class="btn">View Demo</a> -->
+    <!-- </div> -->
+  </section>
+
+  <footer>
+    © 2025 ArpiSpace — Personal App Collection
+  </footer>
+
+</body>
+</html>

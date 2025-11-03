@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnnSpace — Developer & Video Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+/* ======================================================
+   🌸 ОСНОВА САЙТА
+   ====================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+section {
+  padding: 100px 10%;
+  position: relative;
+}
+.btn {
+  display: inline-block;
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 5px;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(108,99,255,0.3);
+}
+h1, h2, h3 {
+  color: #222;
+}
+
+/* ======================================================
+   🌟 HERO
+   ====================================================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.hero-content {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.hero img {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* ======================================================
+   👩‍💻 ABOUT
+   ====================================================== */
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.about-text {
+  flex: 5;
+  min-width: 380px;
+  margin-right: 50px;
+}
+.about-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+.about-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+}
+.about img {
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.socials {
+  margin-top: 20px;
+}
+.socials a {
+  margin-right: 15px;
+  font-size: 1rem;
+  background: #f5f5ff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+}
+.socials a:hover {
+  background: #6c63ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ======================================================
+   💼 PROJECTS
+   ====================================================== */
+.projects {
+  background: #f8f8f8;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(108,99,255,0.2);
+}
+.project-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* ======================================================
+   💬 CONTACT
+   ====================================================== */
+.contact {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.contact h2 { font-size: 2rem; margin-bottom: 25px; }
+.contact p { font-size: 1.1rem; margin-bottom: 30px; color: #555; }
+.contact .btn {
+  display: inline-block;
+  min-width: 260px;
+  text-align: center;
+  padding: 14px 0;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 12px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+}
+.contact .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(108,99,255,0.3);
+}
+
+/* ======================================================
+   ⚙️ FOOTER
+   ====================================================== */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ======================================================
+   🌈 АНИМАЦИИ
+   ====================================================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
+}
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================================================
+   📱 АДАПТАЦИЯ
+   ====================================================== */
+@media (max-width: 768px) {
+  .hero, .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 60px 8%;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact .btn {
+    min-width: 80%;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content" data-animate>
+      <h1>Hi, I’m Arpi — Developer, Website-Maker & Editor</h1>
+      <p>I create modern apps, interfaces and videos that make business easier and life more beautiful.</p>
+      <a href="#projects" class="btn">View my work</a>
+      <a href="#contact" class="btn" style="background:#fff;color:#6c63ff;border:2px solid #6c63ff;">Contact me</a>
+      <a href="#about" class="btn" style="background: linear-gradient(135deg, #6c63ff, #a67bff); color:#fff;">About Me</a>
+    </div>
+    <img src="images/lock_in.JPG" alt="workspace" data-animate />
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-text" data-animate>
+      <h2>About Me</h2><br>
+      <p>I’m a 15-year-old developer passionate about technology, design, and storytelling through video.
+      I code apps and websites, create clean user interfaces, and craft engaging visuals.
+      My goal is to build useful, beautiful tools that help people in everyday life. I make previews for videos, you can check out my remakes for popular videos. I'm also into editing and am developing in this direction. Examples of my work are on my TikTok.</p>
+      <div class="socials">
+        <a href="https://t.me/khhhach" target="_blank">Telegram</a>
+        <a href="https://www.tiktok.com/@arpi1_4?_r=1&_t=ZG-916IMDgTwdl" target="_blank">TikTok</a>
+      </div>
+    </div>
+    <img src="images/me.jpg" alt="Ann portrait" data-animate />
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2 data-animate>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-animate>
+        <img src="images/flow.JPG" alt="Apps" />
+        <h3>Apps</h3>
+        <p>See some of my apps.</p>
+        <a href="apps.html" class="btn">View project</a>
+      </div>
+      <div class="project-card" data-animate>
+        <img src="images/desing.JPG" alt="My websites" />
+        <h3>My websites</h3>
+        <p>See all my websites.</p>
+        <a href="design.html" class="btn">Go to websites</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 data-animate>Let’s work together!</h2>
+    <p data-animate>If you have an idea or project, feel free to reach out!</p>
+    <a href="https://t.me/khhhach" target="_blank" class="btn" data-animate>📩 Telegram: @khhhach</a>
+    <a href="https://discord.gg/XJsR6Mb4" target="_blank" class="btn" data-animate>📩 Discord: @vecargejen</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 ArpiSpace — Everything is possible with my cooperation.<br>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
+    const elements = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

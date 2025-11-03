@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Websites — AnnSpace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family:"Poppins", sans-serif; margin:0; padding:0; background:#fff; color:#333; }
+    a { text-decoration:none; color:inherit; }
+
+    header { text-align:center; padding:80px 10%; }
+    h1 { font-size:2.5rem; margin-bottom:20px; }
+    p { font-size:1.1rem; color:#555; }
+    .btn {
+      display: inline-block;
+      background: #6c63ff;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(108,99,255,0.3);
+    }
+    .grid { 
+        display:grid; 
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); 
+        gap:20px; padding:20px 10%; 
+    }
+    .card { border-radius:15px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition:all 0.3s ease; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(108,99,255,0.2); }
+    .card img { width:100%; display:block; }
+    footer { text-align:center; padding:30px 0; font-size:0.9rem; color:#777; }
+    @media(max-width:768px){ .grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My websites</h1>
+    <p>Here you can see all my websites, but for now this is my only one 😔 Every new website will appear here.</p>
+    <a href="index.html#projects" class="btn">← Back to Portfolio</a>
+  </header>
+  <div class="grid">
+    <!-- Примеры дизайнов, заменишь на свои -->
+    <div class="card"><img src="images/design1.png" alt="Design 1"></div>
+    <div class="card"><img src="images/design2.png" alt="Design 2"></div>
+    <div class="card"><img src="images/design3.png" alt="Design 3"></div>
+  </div>
+  <footer>
+    © 2025 ArpiSpace — Everything is possible with my cooperation.
+  </footer>
+</body>
+</html>
