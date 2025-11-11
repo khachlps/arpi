@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Websites — AnnSpace</title>
+  <title>Websites — ArpiSpace</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -14,9 +14,11 @@
       color: #333;
       text-align: center;
     }
-    header { padding: 80px 10%; }
-    h1 { font-size: 2.5rem; margin-bottom: 20px; }
-    p { font-size: 1.1rem; color: #555; }
+    header {
+      padding: 80px 10%;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    p { font-size: 1.1rem; color: #555; margin-bottom: 40px; }
     .btn {
       display: inline-block;
       background: #6c63ff;
@@ -32,6 +34,43 @@
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(108,99,255,0.3);
     }
+
+    /* Портфолио-сетка */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 10%;
+      margin-bottom: 80px;
+    }
+    .portfolio-item {
+      background: #f9f9f9;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(108,99,255,0.2);
+    }
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+    }
+    .portfolio-item h3 {
+      margin: 15px 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .portfolio-item a {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #6c63ff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
     footer {
       text-align: center;
       padding: 30px 0;
@@ -42,10 +81,32 @@
 </head>
 <body>
   <header>
-    <h1>My websites</h1>
-    <p>Here you can see all my websites, but for now this is my only one 😔 Every new website will appear here.</p>
+    <h1>My Websites</h1>
+    <p>Here you can see all my websites. Every new project will appear here.</p>
     <a href="index.html#projects" class="btn">← Back to Portfolio</a>
   </header>
+
+  <!-- Портфолио-сетка -->
+  <section class="portfolio">
+    <!-- Пример сайта 1 -->
+    <div class="portfolio-item">
+      <img src="images/screenshot1.png" alt="Example Website 1">
+      <h3>Example Website 1</h3>
+      <a href="https://cafe114.netlify.app" target="_blank">Visit Website →</a>
+    </div>
+    <!-- Пример сайта 2
+    <div class="portfolio-item">
+      <img src="screenshot2.png" alt="Example Website 2">
+      <h3>Example Website 2</h3>
+      <a href="https://example2.com" target="_blank">Visit Website →</a>
+    </div>
+    Пример сайта 3 -->
+    <!-- <div class="portfolio-item">
+      <img src="screenshot3.png" alt="Example Website 3">
+      <h3>Example Website 3</h3>
+      <a href="https://example3.com" target="_blank">Visit Website →</a> --> -->
+    </div>
+  </section>
 
   <footer>
     © 2025 ArpiSpace — Everything is possible with my cooperation.
