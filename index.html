@@ -8,7 +8,7 @@
   <style>
 /* ======================================================
    🌸 ОСНОВА САЙТА
-   ====================================================== */
+====================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ h1, h2, h3 {
 
 /* ======================================================
    🌟 HERO
-   ====================================================== */
+====================================================== */
 .hero {
   height: 100vh;
   display: flex;
@@ -78,7 +78,7 @@ h1, h2, h3 {
 
 /* ======================================================
    👩‍💻 ABOUT
-   ====================================================== */
+====================================================== */
 .about {
   height: 100vh;
   display: flex;
@@ -130,7 +130,7 @@ h1, h2, h3 {
 
 /* ======================================================
    💼 PROJECTS
-   ====================================================== */
+====================================================== */
 .projects {
   background: #f8f8f8;
   padding-top: 100px;
@@ -170,7 +170,7 @@ h1, h2, h3 {
 
 /* ======================================================
    💬 CONTACT
-   ====================================================== */
+====================================================== */
 .contact {
   text-align: center;
   padding-top: 100px;
@@ -197,7 +197,7 @@ h1, h2, h3 {
 
 /* ======================================================
    ⚙️ FOOTER
-   ====================================================== */
+====================================================== */
 footer {
   text-align: center;
   padding: 30px 0;
@@ -207,7 +207,7 @@ footer {
 
 /* ======================================================
    🌈 АНИМАЦИИ
-   ====================================================== */
+====================================================== */
 [data-animate] {
   opacity: 0;
   transform: translateY(20px);
@@ -220,28 +220,49 @@ footer {
 
 /* ======================================================
    📱 АДАПТАЦИЯ
-   ====================================================== */
+====================================================== */
 @media (max-width: 768px) {
-  .hero, .about {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-text {
-    margin-right: 0;
-    margin-top: 30px;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  section {
-    padding: 60px 8%;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact .btn {
-    min-width: 80%;
-  }
+  /* Общие секции */
+  section { padding: 60px 6%; }
+
+  /* HERO */
+  .hero { flex-direction: column; text-align: center; height: auto; padding-top: 40px; }
+  .hero h1 { font-size: 2.1rem; }
+  .hero p { font-size: 1rem; }
+  .hero img { width: 260px; margin-top: 25px; }
+
+  /* ABOUT */
+  .about { flex-direction: column; text-align: center; height: auto; }
+  .about-text { margin: 0; min-width: 100%; margin-top: 30px; }
+  .about-text h2 { font-size: 2.3rem; }
+  .about-text p { font-size: 1.1rem; line-height: 1.55; }
+  .about img { width: 260px; margin-top: 30px; }
+  .socials a { display: block; margin: 10px auto; width: 80%; text-align: center; }
+
+  /* PROJECTS */
+  .projects h2 { font-size: 1.8rem; }
+  .projects-grid { grid-template-columns: 1fr; gap: 25px; }
+  .project-card img { height: 180px; }
+  .project-card h3 { font-size: 1.3rem; }
+  .project-card p { font-size: 1rem; }
+
+  /* CONTACT */
+  .contact h2 { font-size: 1.7rem; }
+  .contact p { font-size: 1rem; margin-bottom: 20px; }
+  .contact .btn { min-width: 90%; font-size: 1rem; }
+
+  /* FOOTER */
+  footer { font-size: 0.8rem; padding: 20px; }
+}
+
+/* ⭐ Extra small phones */
+@media (max-width: 420px) {
+  .hero h1 { font-size: 1.7rem; }
+  .hero img, .about img { width: 220px; }
+  .btn { width: 100%; font-size: 0.9rem; padding: 10px; }
+  .about-text p { font-size: 1rem; }
+  .project-card img { height: 160px; }
+  .projects-grid { gap: 20px; }
 }
   </style>
 </head>
@@ -256,7 +277,6 @@ footer {
       <a href="#contact" class="btn" style="background:#fff;color:#6c63ff;border:2px solid #6c63ff;">Contact me</a>
       <a href="#about" class="btn" style="background: linear-gradient(135deg, #6c63ff, #a67bff); color:#fff;">About Me</a>
     </div>
-    <!-- <img src="images/mee.jpg" alt="workspace" onerror="this.src='https://via.placeholder.com/380x300?text=Image+Not+Found';" /> -->
     <img src="images/mee.jpg" alt="workspace" data-animate />
   </section>
 
