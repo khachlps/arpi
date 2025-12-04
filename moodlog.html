@@ -89,6 +89,86 @@
     @media (max-width: 768px) {
       .screenshots img { width: 90%; }
     }
+    /* ======================================================
+   📱 MOBILE STYLE — MOODLOG PAGE
+   Адаптация для всех экранов до 768px
+====================================================== */
+@media (max-width: 768px) {
+
+/* HEADER */
+header {
+  padding: 60px 7% 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  margin-top: 25px;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 1rem;
+  padding: 0 7%;
+  margin: 20px auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* SCREENSHOTS */
+.screenshots {
+  padding: 30px 7%;
+  gap: 20px;
+}
+
+.screenshots img {
+  width: 100%;
+  max-width: 330px;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px 10%;
+  font-size: 0.85rem;
+}
+}
+
+/* ======================================================
+ 📱 Extra small (до 480px)
+====================================================== */
+@media (max-width: 480px) {
+
+header h1 {
+  font-size: 1.7rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.screenshots img {
+  max-width: 260px;
+}
+
+.description {
+  font-size: 0.95rem;
+}
+
+footer {
+  font-size: 0.82rem;
+}
+}
   </style>
 </head>
 <body>
